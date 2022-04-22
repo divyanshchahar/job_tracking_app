@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+/* 
+##########
+# HEADER #
+########## 
+*/
+
 .header{
   display:flex;
   justify-content: space-between;
@@ -14,4 +20,26 @@
 
 .header button{
   padding: 10px;
+  display: block;
 }
+
+.header img {
+  height: 20px;
+}
+
+ /* hover Pannel */
+ .hoverPannel{
+   float: right;
+   padding: 10px;
+   border-radius: 5px;
+   background-color: red;
+ }
+
+ .hoverPannel button{
+   padding: 5px;
+   margin: 5px;
+ }
+
+ .hoveringPannel p{
+   margin: 5px;
+ } 

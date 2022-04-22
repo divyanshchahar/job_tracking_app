@@ -1,6 +1,19 @@
-import React from "react";
+// ###########
+// # IMPORTS #
+// ###########
+
+// Importing Functionality
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+
+// Images and Icons
+import icon_user from "./images/icon_user.svg";
+
+import "./index.css"; //css file
+
+// ########################
+// # VARIABLE DECLARATION #
+// ########################
 
 const today = new Date().toLocaleDateString(undefined, {
   weekday: "long",
@@ -13,15 +26,34 @@ const logStatus = "Login";
 const userName = "Divyansh Chahar";
 const userId = "divyanchahar@outlook.com";
 
-function Header() {
-  return (
-    <div className='header'>
-      <p>{today}</p>
+// ##########################
+// # COMPONENET DECLARATION #
+// ##########################
 
-      <p>{userName}</p>
-      <p>{userId}</p>
-      <button>{logStatus}</button>
-    </div>
+// HEADER
+function Header() {
+  const [isUserCreds, setIsUserCreds] = useState(false);
+
+  return (
+    <>
+      <div className='header'>
+        <p>{today}</p>
+
+        <button
+          onMouseEnter={() => setIsUserCreds(true)}
+          onMouseLeave={() => setIsUserCreds(false)}>
+          <img src={icon_user} alt='user icon' />
+        </button>
+      </div>
+
+      {isUserCreds && (
+        <div className='hoverPannel'>
+          <p>User Name: {userName}</p>
+          <p>User E-mail: {userId}</p>
+          <button>{logStatus}</button>
+        </div>
+      )}
+    </>
   );
 }
 
