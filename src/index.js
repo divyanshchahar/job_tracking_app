@@ -26,6 +26,30 @@ const logStatus = "Login";
 const userName = "Divyansh Chahar";
 const userId = "divyanchahar@outlook.com";
 
+const myData = [
+  {
+    sNo: 1,
+    jobTitle: "Front End Developer",
+    company: "A",
+    source: "LinkedIn",
+    jobStatus: "pending",
+  },
+  {
+    sNo: 2,
+    jobTitle: "Back End Developer",
+    company: "B",
+    source: "Naukari",
+    jobStatus: "interviewing",
+  },
+  {
+    sNo: 3,
+    jobTitle: "Full Stack Developer",
+    company: "C",
+    source: "Google",
+    jobStatus: "declined",
+  },
+];
+
 // ##########################
 // # COMPONENET DECLARATION #
 // ##########################
@@ -57,4 +81,43 @@ function Header() {
   );
 }
 
-ReactDOM.render(<Header />, document.getElementById("root"));
+// JOB LIST
+function JobList() {
+  const [jobInfo, setJobInfo] = useState(myData);
+  return (
+    <>
+      <div className='joblist joblistheader'>
+        <p>S.No.</p>
+        <p>Position</p>
+        <p>Company</p>
+        <p>Status</p>
+        <p>Source</p>
+      </div>
+      {jobInfo.map((prop) => {
+        const { sNo, jobTitle, company, source, jobStatus } = prop;
+        return (
+          <>
+            <div className='joblist'>
+              <p>{sNo}</p>
+              <p>{jobTitle}</p>
+              <p>{company}</p>
+              <p>{jobStatus}</p>
+              <p>{source}</p>
+            </div>
+          </>
+        );
+      })}
+    </>
+  );
+}
+
+function FinalRender() {
+  return (
+    <>
+      <Header></Header>
+      <JobList></JobList>
+    </>
+  );
+}
+
+ReactDOM.render(<FinalRender />, document.getElementById("root"));
