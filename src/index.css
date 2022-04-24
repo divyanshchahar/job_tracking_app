@@ -46,22 +46,28 @@ body{
 }
 
  /* hover Pannel */
- .hoverPannel{
+ .hoverpannel{
    float: right;
    padding: 10px;
    border-radius: 5px;
-   background-color: red;
    margin-right: 10px;
+   background-color: white;
  }
 
- .hoverPannel button{
-   padding: 5px;
+ .hoverpannel button{
+   padding: 10px;
    margin: 5px;
+   background-color: darkblue;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   width: 100%;
+   font-weight: bold;
  }
 
- .hoveringPannel p{
+ .hoverpannel p{
    margin: 5px;
- } 
+ }
 
 /* 
 ####################
@@ -84,5 +90,5 @@ body{
 .joblistheader{
   background-color: #e5e5ff;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 125px;
 }

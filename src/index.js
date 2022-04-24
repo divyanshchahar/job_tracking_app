@@ -74,10 +74,10 @@ function Header() {
       </div>
 
       {isUserCreds && (
-        <div className='hoverPannel'>
+        <div className='hoverpannel'>
           <p>User Name: {userName}</p>
           <p>User E-mail: {userId}</p>
-          <button>{logStatus}</button>
+          <button>Logout</button>
         </div>
       )}
     </>
