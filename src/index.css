@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body{
+  background-color: #FAFAFF;
+}
+
 /* 
 ##########
 # HEADER #
@@ -66,7 +70,7 @@
 */
 
 .joblist{
-  background-color:  rgba(0, 0, 255, 0.05);
+  background-color:  rgb(255, 255, 255);
   margin: 5px auto;
   padding: 15px;
   display: grid;
@@ -78,7 +82,7 @@
 }
 
 .joblistheader{
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: #e5e5ff;
   font-weight: bold;
   margin-top: 100px;
 }
