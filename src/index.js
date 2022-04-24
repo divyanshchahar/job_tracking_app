@@ -67,6 +67,7 @@ function Header() {
           onMouseEnter={() => setIsUserCreds(true)}
           onMouseLeave={() => setIsUserCreds(false)}>
           <img src={icon_user} alt='user icon' />
+          {userName}
         </button>
       </div>
 
