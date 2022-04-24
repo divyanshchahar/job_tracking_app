@@ -15,18 +15,30 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px 50px;
-  background-color: grey;
+}
+
+#branding{
+  font-family: 'Pacifico', cursive;
+  color: white;
+  background-color: darkblue;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .header button{
+  background-color: darkblue;
   padding: 10px;
+  color: white;
   font-weight: 600;
+  border: none;
+  border-radius: 5px
 }
 
 .header img {
   height: 20px;
   vertical-align: middle;
   padding-right: 5px;
+  filter: invert(96%) sepia(0%) saturate(7500%) hue-rotate(117deg) brightness(101%) contrast(109%)
 }
 
  /* hover Pannel */

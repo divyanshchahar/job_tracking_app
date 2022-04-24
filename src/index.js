@@ -61,6 +61,8 @@ function Header() {
   return (
     <>
       <div className='header'>
+        <div id='branding'>OPPURTUNITY</div>
+
         <p>{today}</p>
 
         <button
