@@ -8,6 +8,9 @@ import ReactDOM from "react-dom";
 
 // Images and Icons
 import icon_user from "./images/icon_user.svg";
+import icon_netlify from "./images/icon_netlify.svg";
+import icon_react from "./images/icon_react.svg";
+import icon_github from "./images/icon_github.svg";
 
 import "./index.css"; //css file
 
@@ -25,6 +28,9 @@ const today = new Date().toLocaleDateString(undefined, {
 const logStatus = "Login";
 const userName = "Divyansh Chahar";
 const userId = "divyanchahar@outlook.com";
+
+const devName = "Divyansh Chahar";
+const devId = "divyanshchahar@outlook.com";
 
 const myData = [
   {
@@ -114,11 +120,37 @@ function JobList() {
   );
 }
 
+function Footer() {
+  return (
+    <>
+      <div className='bottombar'>
+        <div className='credentialcontainer'>
+          <div>
+            <img src={icon_github} />
+          </div>
+          <div>
+            {devName}
+            <br></br>
+            {devId}
+          </div>
+        </div>
+        <div>
+          developed using <img src={icon_react} alt='' />
+        </div>
+        <div>
+          hosted on <img src={icon_netlify} alt='' />
+        </div>
+      </div>
+    </>
+  );
+}
+
 function FinalRender() {
   return (
     <>
       <Header></Header>
       <JobList></JobList>
+      <Footer></Footer>
     </>
   );
 }

@@ -92,3 +92,33 @@ body{
   font-weight: bold;
   margin-top: 125px;
 }
+
+/* 
+##########
+# FOOTER #
+########## 
+*/
+
+.bottombar{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px 50px;
+  /* background-color: red; */
+}
+
+.bottombar img{
+  height: 40px;
+  vertical-align: middle;
+}
+
+.credentialcontainer{
+  display:flex;
+}
+
+.credentialcontainer img{
+  height: 50px;
+  margin-right: 10px;
+}
