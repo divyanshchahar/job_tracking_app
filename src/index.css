@@ -105,8 +105,8 @@ body{
   justify-content: space-between;
   position: absolute;
   bottom: 0px;
-  padding: 20px 50px;
-  /* background-color: red; */
+  padding: 20px 100px 50px 100px;
+  background-color: white;
 }
 
 .bottombar img{
@@ -119,6 +119,11 @@ body{
 }
 
 .credentialcontainer img{
-  height: 50px;
+  height: 60px;
   margin-right: 10px;
+}
+
+.credentialcontainer a{
+  text-decoration: none;
+  color: inherit;
 }
