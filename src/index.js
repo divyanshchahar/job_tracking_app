@@ -81,8 +81,8 @@ function Header() {
 
       {isUserCreds && (
         <div className='hoverpannel'>
-          <p>User Name: {userName}</p>
-          <p>User E-mail: {userId}</p>
+          <p>{userName}</p>
+          <p>{userId}</p>
           <button>Logout</button>
         </div>
       )}
