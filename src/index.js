@@ -133,6 +133,7 @@ function JobList() {
   );
 }
 
+//FOOTER
 function Footer() {
   return (
     <>
