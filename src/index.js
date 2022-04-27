@@ -110,7 +110,7 @@ function JobList() {
         const { sNo, jobTitle, company, source, dateAdded, jobStatus } = prop;
         return (
           <>
-            <div className='joblist'>
+            <div className='joblist' key={sNo}>
               <p>{sNo}</p>
               <p>{jobTitle}</p>
               <p>{company}</p>
