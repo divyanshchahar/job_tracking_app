@@ -80,10 +80,27 @@ body{
   margin: 5px auto;
   padding: 15px;
   display: grid;
-  grid-template-columns: 50px 200px 150px 100px 100px;
+  grid-template-columns: 50px 200px 150px 100px 125px 100px 50px;
   justify-content: center;
   row-gap: 10px;
   width: fit-content;
+}
+
+.joblist button{
+  background-color: transparent;
+  height:fit-content;
+  width: fit-content;
+  border: none;
+  margin: 5px;
+}
+
+.joblist button:hover{
+  cursor: pointer;
+}
+
+.joblist img{
+  height: 15px;
+  width: 15px;
 }
 
 .joblistheader{

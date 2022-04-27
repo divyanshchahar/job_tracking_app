@@ -11,6 +11,8 @@ import icon_user from './images/icon_user.svg';
 import icon_netlify from './images/icon_netlify.svg';
 import icon_react from './images/icon_react.svg';
 import icon_github from './images/icon_github.svg';
+import icon_edit from './images/icon_edit.svg';
+import icon_delete from './images/icon_delete.svg';
 
 import './index.css'; //css file
 
@@ -100,8 +102,9 @@ function JobList() {
         <p>Position</p>
         <p>Company</p>
         <p>Status</p>
-        {/* <p>Date</p> */}
+        <p>Date</p>
         <p>Source</p>
+        <p>Actions</p>
       </div>
       {jobInfo.map((prop) => {
         const { sNo, jobTitle, company, source, dateAdded, jobStatus } = prop;
@@ -112,8 +115,16 @@ function JobList() {
               <p>{jobTitle}</p>
               <p>{company}</p>
               <p>{jobStatus}</p>
-              {/* <p>{dateAdded}</p> */}
+              <p>{dateAdded}</p>
               <p>{source}</p>
+              <div>
+                <button>
+                  <img src={icon_edit} alt='edit icon' />
+                </button>
+                <button>
+                  <img src={icon_delete} alt='delete icon' />
+                </button>
+              </div>
             </div>
           </>
         );
