@@ -3,57 +3,60 @@
 // ###########
 
 // Importing Functionality
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 // Images and Icons
-import icon_user from "./images/icon_user.svg";
-import icon_netlify from "./images/icon_netlify.svg";
-import icon_react from "./images/icon_react.svg";
-import icon_github from "./images/icon_github.svg";
+import icon_user from './images/icon_user.svg';
+import icon_netlify from './images/icon_netlify.svg';
+import icon_react from './images/icon_react.svg';
+import icon_github from './images/icon_github.svg';
 
-import "./index.css"; //css file
+import './index.css'; //css file
 
 // ########################
 // # VARIABLE DECLARATION #
 // ########################
 
 const today = new Date().toLocaleDateString(undefined, {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
 });
 
-const logStatus = "Login";
-const userName = "Divyansh Chahar";
-const userId = "divyanchahar@outlook.com";
+const logStatus = 'Login';
+const userName = 'Divyansh Chahar';
+const userId = 'divyanchahar@outlook.com';
 
-const devName = "Divyansh Chahar";
-const devId = "divyanshchahar@outlook.com";
+const devName = 'Divyansh Chahar';
+const devId = 'divyanshchahar@outlook.com';
 
 const myData = [
   {
     sNo: 1,
-    jobTitle: "Front End Developer",
-    company: "A",
-    source: "LinkedIn",
-    jobStatus: "pending",
+    jobTitle: 'Front End Developer',
+    company: 'Google',
+    source: 'LinkedIn',
+    dateAdded: today,
+    jobStatus: 'pending'
   },
   {
     sNo: 2,
-    jobTitle: "Back End Developer",
-    company: "B",
-    source: "Naukari",
-    jobStatus: "interviewing",
+    jobTitle: 'Back End Developer',
+    company: 'Meta',
+    source: 'Naukari',
+    dateAdded: today,
+    jobStatus: 'interviewing'
   },
   {
     sNo: 3,
-    jobTitle: "Full Stack Developer",
-    company: "C",
-    source: "Google",
-    jobStatus: "declined",
-  },
+    jobTitle: 'Full Stack Developer',
+    company: 'Amazon',
+    source: 'Google',
+    dateAdded: today,
+    jobStatus: 'declined'
+  }
 ];
 
 // ##########################
@@ -71,9 +74,7 @@ function Header() {
 
         <p>{today}</p>
 
-        <button
-          onMouseEnter={() => setIsUserCreds(true)}
-          onMouseLeave={() => setIsUserCreds(false)}>
+        <button onClick={() => setIsUserCreds(!isUserCreds)}>
           <img src={icon_user} alt='user icon' />
           {userName}
         </button>
@@ -100,10 +101,11 @@ function JobList() {
         <p>Position</p>
         <p>Company</p>
         <p>Status</p>
+        {/* <p>Date</p> */}
         <p>Source</p>
       </div>
       {jobInfo.map((prop) => {
-        const { sNo, jobTitle, company, source, jobStatus } = prop;
+        const { sNo, jobTitle, company, source, dateAdded, jobStatus } = prop;
         return (
           <>
             <div className='joblist'>
@@ -111,6 +113,7 @@ function JobList() {
               <p>{jobTitle}</p>
               <p>{company}</p>
               <p>{jobStatus}</p>
+              {/* <p>{dateAdded}</p> */}
               <p>{source}</p>
             </div>
           </>
@@ -157,4 +160,4 @@ function FinalRender() {
   );
 }
 
-ReactDOM.render(<FinalRender />, document.getElementById("root"));
+ReactDOM.render(<FinalRender />, document.getElementById('root'));

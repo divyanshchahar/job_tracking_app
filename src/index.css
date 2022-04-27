@@ -80,11 +80,10 @@ body{
   margin: 5px auto;
   padding: 15px;
   display: grid;
-  grid-template-columns: 100px 200px 200px 200px 200px;
+  grid-template-columns: 50px 200px 150px 100px 100px;
   justify-content: center;
   row-gap: 10px;
-  border-radius: 5px;
-  width: 925px;
+  width: fit-content;
 }
 
 .joblistheader{
