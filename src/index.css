@@ -38,6 +38,10 @@ body{
   border-radius: 5px
 }
 
+.header  button:hover {
+  cursor: pointer;
+}
+
 .header img {
   height: 20px;
   vertical-align: middle;
