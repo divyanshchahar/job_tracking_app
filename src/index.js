@@ -16,6 +16,8 @@ import icon_delete from './images/icon_delete.svg';
 
 import './index.css'; //css file
 
+import data from './sample.json';
+
 // ########################
 // # VARIABLE DECLARATION #
 // ########################
@@ -33,32 +35,19 @@ const userId = 'divyanchahar@outlook.com';
 const devName = 'Divyansh Chahar';
 const devId = 'divyanshchahar@outlook.com';
 
-const myData = [
-  {
-    sNo: 1,
-    jobTitle: 'Front End Developer',
-    company: 'Google',
-    source: 'LinkedIn',
-    dateAdded: today,
-    jobStatus: 'pending'
-  },
-  {
-    sNo: 2,
-    jobTitle: 'Back End Developer',
-    company: 'Meta',
-    source: 'Naukari',
-    dateAdded: today,
-    jobStatus: 'interviewing'
-  },
-  {
-    sNo: 3,
-    jobTitle: 'Full Stack Developer',
-    company: 'Amazon',
-    source: 'Google',
-    dateAdded: today,
-    jobStatus: 'declined'
-  }
-];
+var jobData = [];
+
+// ########################
+// # FUNCTION DECLARATION #
+// ########################
+
+function readData() {
+  data.map((dataPoint) => {
+    jobData.push(dataPoint);
+  });
+}
+
+readData();
 
 // ##########################
 // # COMPONENET DECLARATION #
@@ -94,7 +83,8 @@ function Header() {
 
 // JOB LIST
 function JobList() {
-  const [jobInfo, setJobInfo] = useState(myData);
+  //
+  const [jobInfo, setJobInfo] = useState(jobData);
   return (
     <>
       <div className='joblist joblistheader'>
