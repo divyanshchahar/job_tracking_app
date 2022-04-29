@@ -28,7 +28,6 @@ const today = new Date().toLocaleDateString(undefined, {
   day: 'numeric'
 });
 
-const logStatus = 'Login';
 const userName = 'Divyansh Chahar';
 const userId = 'divyanchahar@outlook.com';
 
