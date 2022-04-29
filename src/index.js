@@ -54,6 +54,11 @@ function readData() {
   });
 }
 
+const addJob = (e) => {
+  e.preventDefault();
+  console.log(e.target.jobTitle);
+};
+
 readData();
 
 // ##########################
