@@ -81,6 +81,23 @@ function Header() {
   );
 }
 
+// FROM FOR ADDING MORE JOBS
+function JobForm() {
+  return (
+    <>
+      <div className='entryform'>
+        <p></p> {/*  palceholder */}
+        <input type='text' placeholder='Position' />
+        <input type='text' placeholder='Company' />
+        <p>status</p>
+        <p>{today}</p>
+        <input type='text' placeholder='Source' />
+        <button>Add</button>
+      </div>
+    </>
+  );
+}
+
 // JOB LIST
 function JobList() {
   //
@@ -96,6 +113,7 @@ function JobList() {
         <p>Source</p>
         <p>Actions</p>
       </div>
+
       {jobInfo.map((prop) => {
         const { sNo, jobTitle, company, source, dateAdded, jobStatus } = prop;
         return (
@@ -151,10 +169,15 @@ function Footer() {
   );
 }
 
+// #########################
+// # RENDERING COMPONENETS #
+// #########################
+
 function FinalRender() {
   return (
     <>
       <Header></Header>
+      <JobForm></JobForm>
       <JobList></JobList>
       <Footer></Footer>
     </>
