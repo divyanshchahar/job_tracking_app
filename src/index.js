@@ -94,11 +94,11 @@ function JobForm() {
     <>
       <div className='entryform'>
         <p></p> {/*  palceholder */}
-        <input type='text' placeholder='Position' />
-        <input type='text' placeholder='Company' />
+        <input type='text' value={jobTitle} placeholder='Position' />
+        <input type='text' value={company} placeholder='Company' />
         <p>status</p>
         <p>{today}</p>
-        <input type='text' placeholder='Source' />
+        <input type='text' value={source} placeholder='Source' />
         <button>Add</button>
       </div>
     </>
