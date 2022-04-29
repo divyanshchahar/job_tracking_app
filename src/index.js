@@ -36,6 +36,13 @@ const devId = 'divyanshchahar@outlook.com';
 
 var jobData = [];
 
+var sNo = 0;
+var jobTitle = '';
+var company = '';
+var status = '';
+var dateAdded = new Date();
+var source = '';
+
 // ########################
 // # FUNCTION DECLARATION #
 // ########################
