@@ -94,7 +94,7 @@ function JobForm() {
       e.target.jobTitle.value &&
       e.target.company.value &&
       e.target.source.value
-    )
+    ) {
       var temp = {
         sNo: jobData.length + 1,
         jobTitle: e.target.jobTitle.value,
@@ -103,44 +103,11 @@ function JobForm() {
         dateAdded: today,
         jobStatus: 'pending'
       };
-    jobData.push(temp);
-  };
+    }
 
-  return (
-    <>
-      <form className='entryform' onSubmit={handleSubmit}>
-        <p></p> {/*  palceholder */}
-        {/*  */}
-        <input
-          type='text'
-          name='jobTitle'
-          id='jobTitle'
-          value={jobTitle}
-          onChange={(e) => setJobTitle(e.target.value)}
-          placeholder='Position'
-        />
-        <input
-          type='text'
-          name='company'
-          id='company'
-          value={company}
-          onChange={(e) => setCompany(e.target.value)}
-          placeholder='Company'
-        />
-        <p>status</p>
-        <p>{today}</p>
-        <input
-          type='text'
-          name='source'
-          id='source'
-          value={source}
-          onChange={(e) => setSource(e.target.value)}
-          placeholder='Source'
-        />
-        <button type='submit'>Add</button>
-      </form>
-    </>
-  );
+    jobData.push(temp);
+    console.log(jobData);
+  };
 }
 
 // JOB LIST
@@ -149,6 +116,40 @@ function JobList() {
   const [jobInfo, setJobInfo] = useState(jobData);
   return (
     <>
+      <div>
+        <form className='entryform'>
+          <p></p> {/*  palceholder */}
+          {/*  */}
+          <input
+            type='text'
+            name='jobTitle'
+            id='jobTitle'
+            // value={jobTitle}
+            // onChange={(e) => setJobTitle(e.target.value)}
+            placeholder='Position'
+          />
+          <input
+            type='text'
+            name='company'
+            id='company'
+            // value={company}
+            // onChange={(e) => setCompany(e.target.value)}
+            placeholder='Company'
+          />
+          <p>status</p>
+          <p>{today}</p>
+          <input
+            type='text'
+            name='source'
+            id='source'
+            // value={source}
+            // onChange={(e) => setSource(e.target.value)}
+            placeholder='Source'
+          />
+          <button type='submit'>Add</button>
+        </form>
+      </div>
+
       <div className='joblist joblistheader'>
         <p>S.No.</p>
         <p>Position</p>
