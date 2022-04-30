@@ -81,31 +81,6 @@ function Header() {
   );
 }
 
-// FROM FOR ADDING MORE JOBS
-function JobForm() {
-  // function to subit forms
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (
-      e.target.jobTitle.value &&
-      e.target.company.value &&
-      e.target.source.value
-    ) {
-      var temp = {
-        sNo: jobData.length + 1,
-        jobTitle: e.target.jobTitle.value,
-        company: e.target.company.value,
-        source: e.target.source.value,
-        dateAdded: today,
-        jobStatus: 'pending'
-      };
-    }
-
-    jobData.push(temp);
-    console.log(jobData);
-  };
-}
-
 // JOB LIST
 function JobList() {
   //
