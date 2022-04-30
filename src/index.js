@@ -92,15 +92,21 @@ function Header() {
 function JobForm() {
   return (
     <>
-      <div className='entryform'>
+      <form className='entryform'>
         <p></p> {/*  palceholder */}
-        <input type='text' value={jobTitle} placeholder='Position' />
-        <input type='text' value={company} placeholder='Company' />
+        {/*  */}
+        <input type='text' placeholder='Position' />
+        {/*  */}
+        <input type='text' placeholder='Company' />
+        {/*  */}
         <p>status</p>
+        {/*  */}
         <p>{today}</p>
-        <input type='text' value={source} placeholder='Source' />
-        <button type='submit'>Submit</button>
-      </div>
+        {/*  */}
+        <input type='text' placeholder='Source' />
+        {/*  */}
+        <button type='submit'>Add</button>
+      </form>
     </>
   );
 }
