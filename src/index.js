@@ -90,10 +90,6 @@ function JobForm() {
   // function to subit forms
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // console.log(e.target.jobTitle.value);
-    // console.log(e.target.company.value);
-    // console.log(e.target.source.value);
     if (
       e.target.jobTitle.value &&
       e.target.company.value &&
