@@ -221,7 +221,6 @@ function FinalRender() {
   return (
     <>
       <Header></Header>
-      <JobForm></JobForm>
       <JobList></JobList>
       <Footer></Footer>
     </>
