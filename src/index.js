@@ -111,14 +111,36 @@ function JobList() {
   //
   const [jobInfo, setJobInfo] = useState(jobData);
 
-  var [jobTitle, setJobTitle] = useState('');
-  var [company, setCompany] = useState('');
-  var [source, setSource] = useState('');
+  const [jobTitle, setJobTitle] = useState('');
+  const [company, setCompany] = useState('');
+  const [source, setSource] = useState('');
+
+  // function to subit forms
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      e.target.jobTitle.value &&
+      e.target.company.value &&
+      e.target.source.value
+    ) {
+      var temp = {
+        sNo: jobData.length + 1,
+        jobTitle: e.target.jobTitle.value,
+        company: e.target.company.value,
+        source: e.target.source.value,
+        dateAdded: today,
+        jobStatus: 'pending'
+      };
+      setJobInfo((jobInfo) => {
+        return [...jobInfo, temp];
+      });
+    }
+  };
 
   return (
     <>
       <div>
-        <form className='entryform'>
+        <form className='entryform' onSubmit={handleSubmit}>
           <p></p> {/*  palceholder */}
           {/*  */}
           <input
