@@ -54,11 +54,6 @@ function readData() {
   });
 }
 
-const addJob = (e) => {
-  e.preventDefault();
-  console.log(e.target.jobTitle);
-};
-
 readData();
 
 // ##########################
@@ -104,7 +99,7 @@ function JobForm() {
         <p>status</p>
         <p>{today}</p>
         <input type='text' value={source} placeholder='Source' />
-        <button>Add</button>
+        <button type='submit'>Submit</button>
       </div>
     </>
   );
