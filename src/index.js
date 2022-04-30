@@ -4,7 +4,7 @@
 
 // Importing Functionality
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 // Images and Icons
 import icon_user from './images/icon_user.svg';
@@ -56,6 +56,12 @@ function readData() {
 
 readData();
 
+// function to subit forms
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(e.target.value);
+};
+
 // ##########################
 // # COMPONENET DECLARATION #
 // ##########################
@@ -90,9 +96,10 @@ function Header() {
 
 // FROM FOR ADDING MORE JOBS
 function JobForm() {
+  var [myValue, setMyValue] = useState('');
   return (
     <>
-      <form className='entryform'>
+      <form className='entryform' onClick={handleSubmit}>
         <p></p> {/*  palceholder */}
         {/*  */}
         <input type='text' placeholder='Position' />
@@ -197,4 +204,10 @@ function FinalRender() {
   );
 }
 
-ReactDOM.render(<FinalRender />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <FinalRender></FinalRender>
+  </React.StrictMode>
+);
