@@ -83,10 +83,6 @@ function Header() {
 
 // FROM FOR ADDING MORE JOBS
 function JobForm() {
-  var [jobTitle, setJobTitle] = useState('');
-  var [company, setCompany] = useState('');
-  var [source, setSource] = useState('');
-
   // function to subit forms
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -114,6 +110,11 @@ function JobForm() {
 function JobList() {
   //
   const [jobInfo, setJobInfo] = useState(jobData);
+
+  var [jobTitle, setJobTitle] = useState('');
+  var [company, setCompany] = useState('');
+  var [source, setSource] = useState('');
+
   return (
     <>
       <div>
@@ -124,16 +125,16 @@ function JobList() {
             type='text'
             name='jobTitle'
             id='jobTitle'
-            // value={jobTitle}
-            // onChange={(e) => setJobTitle(e.target.value)}
+            value={jobTitle}
+            onChange={(e) => setJobTitle(e.target.value)}
             placeholder='Position'
           />
           <input
             type='text'
             name='company'
             id='company'
-            // value={company}
-            // onChange={(e) => setCompany(e.target.value)}
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
             placeholder='Company'
           />
           <p>status</p>
@@ -142,8 +143,8 @@ function JobList() {
             type='text'
             name='source'
             id='source'
-            // value={source}
-            // onChange={(e) => setSource(e.target.value)}
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
             placeholder='Source'
           />
           <button type='submit'>Add</button>
