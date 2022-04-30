@@ -36,13 +36,6 @@ const devId = 'divyanshchahar@outlook.com';
 
 var jobData = [];
 
-var sNo = 0;
-var jobTitle = '';
-var company = '';
-var status = '';
-var dateAdded = new Date();
-var source = '';
-
 // ########################
 // # FUNCTION DECLARATION #
 // ########################
@@ -55,12 +48,6 @@ function readData() {
 }
 
 readData();
-
-// function to subit forms
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log(e.target.value);
-};
 
 // ##########################
 // # COMPONENET DECLARATION #
@@ -96,22 +83,64 @@ function Header() {
 
 // FROM FOR ADDING MORE JOBS
 function JobForm() {
-  var [myValue, setMyValue] = useState('');
+  var [jobTitle, setJobTitle] = useState('');
+  var [company, setCompany] = useState('');
+  var [source, setSource] = useState('');
+
+  // function to subit forms
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // console.log(e.target.jobTitle.value);
+    // console.log(e.target.company.value);
+    // console.log(e.target.source.value);
+    if (
+      e.target.jobTitle.value &&
+      e.target.company.value &&
+      e.target.source.value
+    )
+      var temp = {
+        sNo: jobData.length + 1,
+        jobTitle: e.target.jobTitle.value,
+        company: e.target.company.value,
+        source: e.target.source.value,
+        dateAdded: today,
+        jobStatus: 'pending'
+      };
+    jobData.push(temp);
+  };
+
   return (
     <>
-      <form className='entryform' onClick={handleSubmit}>
+      <form className='entryform' onSubmit={handleSubmit}>
         <p></p> {/*  palceholder */}
         {/*  */}
-        <input type='text' placeholder='Position' />
-        {/*  */}
-        <input type='text' placeholder='Company' />
-        {/*  */}
+        <input
+          type='text'
+          name='jobTitle'
+          id='jobTitle'
+          value={jobTitle}
+          onChange={(e) => setJobTitle(e.target.value)}
+          placeholder='Position'
+        />
+        <input
+          type='text'
+          name='company'
+          id='company'
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          placeholder='Company'
+        />
         <p>status</p>
-        {/*  */}
         <p>{today}</p>
-        {/*  */}
-        <input type='text' placeholder='Source' />
-        {/*  */}
+        <input
+          type='text'
+          name='source'
+          id='source'
+          value={source}
+          onChange={(e) => setSource(e.target.value)}
+          placeholder='Source'
+        />
         <button type='submit'>Add</button>
       </form>
     </>
