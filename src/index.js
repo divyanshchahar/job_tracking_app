@@ -81,18 +81,18 @@ function Header() {
   );
 }
 
-// JOB LIST
+// JOB LIST AND FORM
 function JobList() {
-  //
-  const [jobInfo, setJobInfo] = useState(jobData);
-
-  const [jobTitle, setJobTitle] = useState('');
-  const [company, setCompany] = useState('');
-  const [source, setSource] = useState('');
+  // state variables
+  const [jobInfo, setJobInfo] = useState(jobData); // array to hold job information
+  const [jobTitle, setJobTitle] = useState(''); // string to hold data from form
+  const [company, setCompany] = useState(''); // string to hold data from form
+  const [source, setSource] = useState(''); // string to hold data from form
 
   // function to subit forms
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (
       e.target.jobTitle.value &&
       e.target.company.value &&
@@ -104,7 +104,7 @@ function JobList() {
         company: e.target.company.value,
         source: e.target.source.value,
         dateAdded: today,
-        jobStatus: 'pending'
+        jobStatus: 'pending' // will accept user input in future
       };
       setJobInfo((jobInfo) => {
         return [...jobInfo, temp];
@@ -114,6 +114,7 @@ function JobList() {
 
   return (
     <>
+      {/* form to hold accept values */}
       <div>
         <form className='entryform' onSubmit={handleSubmit}>
           <p></p> {/*  palceholder */}
@@ -148,6 +149,7 @@ function JobList() {
         </form>
       </div>
 
+      {/* header */}
       <div className='joblist joblistheader'>
         <p>S.No.</p>
         <p>Position</p>
@@ -158,6 +160,7 @@ function JobList() {
         <p>Actions</p>
       </div>
 
+      {/* list of jobs */}
       {jobInfo.map((prop) => {
         const { sNo, jobTitle, company, source, dateAdded, jobStatus } = prop;
         return (
@@ -190,21 +193,29 @@ function Footer() {
   return (
     <>
       <div className='bottombar'>
+        {/*  */}
         <div className='credentialcontainer'>
           <div>
             <img src={icon_github} />
           </div>
+
           <div>
             {devName}
+
             <br></br>
+
             {devId}
+
             <br></br>
+
             <a href='#'>Source Code</a>
           </div>
         </div>
+
         <div>
           developed using <img src={icon_react} alt='' />
         </div>
+
         <div>
           hosted on <img src={icon_netlify} alt='' />
         </div>
