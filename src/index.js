@@ -3,7 +3,7 @@
 // ###########
 
 // Importing Functionality
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Images and Icons
@@ -41,13 +41,13 @@ var jobData = [];
 // ########################
 
 // function to read data from json file
-function readData() {
-  data.map((dataPoint) => {
-    jobData.push(dataPoint);
-  });
-}
+// function readData() {
+//   data.map((dataPoint) => {
+//     jobData.push(dataPoint);
+//   });
+// }
 
-readData();
+// readData();
 
 // ##########################
 // # COMPONENET DECLARATION #
@@ -89,7 +89,16 @@ function JobList() {
   const [company, setCompany] = useState(''); // string to hold data from form
   const [source, setSource] = useState(''); // string to hold data from form
 
-  // function to subit forms
+  useEffect(() => {
+    try {
+      jobData = window.localStorage.getItem('JOB_APP_JOBLIST');
+      setJobInfo(JSON.parse(jobData));
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  // function to submit forms
   const handleSubmit = (e) => {
     e.preventDefault();
 
