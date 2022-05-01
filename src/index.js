@@ -36,19 +36,6 @@ const devId = 'divyanshchahar@outlook.com';
 
 var jobData = [];
 
-// ########################
-// # FUNCTION DECLARATION #
-// ########################
-
-// function to read data from json file
-// function readData() {
-//   data.map((dataPoint) => {
-//     jobData.push(dataPoint);
-//   });
-// }
-
-// readData();
-
 // ##########################
 // # COMPONENET DECLARATION #
 // ##########################
