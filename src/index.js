@@ -69,7 +69,7 @@ function Header() {
 // JOB LIST AND FORM
 function JobList() {
   // state variables
-  const [jobInfo, setJobInfo] = useState(jobData); // array to hold job information
+  const [jobInfo, setJobInfo] = useState([]); // array to hold job information
   const [jobTitle, setJobTitle] = useState(''); // string to hold data from form
   const [company, setCompany] = useState(''); // string to hold data from form
   const [source, setSource] = useState(''); // string to hold data from form
@@ -77,9 +77,14 @@ function JobList() {
   useEffect(() => {
     try {
       jobData = window.localStorage.getItem('JOB_APP_JOBLIST');
-      setJobInfo(JSON.parse(jobData));
+
+      if (jobData == null) {
+        setJobInfo([]);
+      } else {
+        setJobInfo(JSON.parse(jobData));
+      }
     } catch (error) {
-      console.log(error);
+      setJobInfo(JSON.parse(jobData));
     }
   }, []);
 
@@ -93,7 +98,7 @@ function JobList() {
       e.target.source.value
     ) {
       var temp = {
-        sNo: jobData.length + 1,
+        sNo: jobInfo.length + 1,
         jobTitle: e.target.jobTitle.value,
         company: e.target.company.value,
         source: e.target.source.value,
