@@ -175,6 +175,7 @@ function JobList() {
                 <button>
                   <img src={icon_edit} alt='edit icon' />
                 </button>
+
                 <button>
                   <img src={icon_delete} alt='delete icon' />
                 </button>
