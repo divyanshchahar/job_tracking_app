@@ -69,11 +69,12 @@ function Header() {
 // JOB LIST AND FORM
 function JobList() {
   // state variables
-  const [jobInfo, setJobInfo] = useState([]); // array to hold job information
+  var [jobInfo, setJobInfo] = useState([]); // array to hold job information
   const [jobTitle, setJobTitle] = useState(''); // string to hold data from form
   const [company, setCompany] = useState(''); // string to hold data from form
   const [source, setSource] = useState(''); // string to hold data from form
 
+  //loading information on first component load
   useEffect(() => {
     try {
       jobData = window.localStorage.getItem('JOB_APP_JOBLIST');
@@ -91,7 +92,6 @@ function JobList() {
   // function to submit forms
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (
       e.target.jobTitle.value &&
       e.target.company.value &&
@@ -105,9 +105,7 @@ function JobList() {
         dateAdded: today,
         jobStatus: 'pending' // will accept user input in future
       };
-      setJobInfo((jobInfo) => {
-        return [...jobInfo, temp];
-      });
+      setJobInfo((jobInfo) => [...jobInfo, temp]);
     }
   };
 
