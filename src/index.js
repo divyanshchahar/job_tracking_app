@@ -16,8 +16,6 @@ import icon_delete from './images/icon_delete.svg';
 
 import './index.css'; //css file
 
-import data from './sample.json';
-
 // ########################
 // # VARIABLE DECLARATION #
 // ########################
