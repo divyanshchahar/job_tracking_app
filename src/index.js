@@ -106,6 +106,10 @@ function JobList() {
         jobStatus: 'pending' // will accept user input in future
       };
       setJobInfo((jobInfo) => [...jobInfo, temp]);
+
+      // Please note that jobinfo is not stored in the local storage even though it has been updated in the previous line of code.
+      // The reason for this approach is because of the fact that while debugging it was observed that even though the state variable is updated and it trigerrs a
+      // re-render, but when the state variable is printted to the console it will would still not show n-1 components.
       window.localStorage.setItem(
         'JOB_APP_JOBLIST',
         JSON.stringify([...jobInfo, temp])
