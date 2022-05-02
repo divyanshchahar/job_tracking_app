@@ -89,7 +89,7 @@ function JobList() {
     }
   }, []);
 
-  // function to submit forms
+  // function to submit forms (please look at inline comments)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -106,6 +106,10 @@ function JobList() {
         jobStatus: 'pending' // will accept user input in future
       };
       setJobInfo((jobInfo) => [...jobInfo, temp]);
+      window.localStorage.setItem(
+        'JOB_APP_JOBLIST',
+        JSON.stringify([...jobInfo, temp])
+      );
     }
   };
 
