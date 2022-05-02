@@ -119,7 +119,7 @@ function JobList() {
 
   return (
     <>
-      {/* form to hold accept values */}
+      {/* form to hold accepted values */}
       <div>
         <form className='entryform' onSubmit={handleSubmit}>
           <p></p> {/*  palceholder */}
