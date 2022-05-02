@@ -89,6 +89,27 @@ function JobList() {
     }
   }, []);
 
+  const deleteJob = (delSno) => {
+    var filteredData = [];
+    var temp = {};
+    var newSno = 0;
+    var i = 0;
+    for (i = 0; i < jobInfo.length; i++) {
+      temp = jobInfo[i];
+      if (temp.sNo != delSno) {
+        newSno++;
+        temp.sNo = newSno;
+        filteredData.push(temp);
+      }
+    }
+    console.log(filteredData);
+    setJobInfo((jobInfo) => filteredData);
+    window.localStorage.setItem(
+      'JOB_APP_JOBLIST',
+      JSON.stringify(filteredData)
+    );
+  };
+
   // function to submit forms (please look at inline comments)
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -182,7 +203,7 @@ function JobList() {
                   <img src={icon_edit} alt='edit icon' />
                 </button>
 
-                <button>
+                <button onClick={() => deleteJob(sNo)}>
                   <img src={icon_delete} alt='delete icon' />
                 </button>
               </div>
