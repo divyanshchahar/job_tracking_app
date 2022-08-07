@@ -74,7 +74,7 @@ function JobList() {
         setJobInfo(JSON.parse(jobData));
       }
     } catch (error) {
-      setJobInfo(JSON.parse(jobData));
+      alert("unable to read local storage");
     }
   }, []);
 
