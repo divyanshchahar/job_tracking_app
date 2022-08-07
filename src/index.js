@@ -26,8 +26,7 @@ const today = new Date().toLocaleDateString(undefined, {
   day: "numeric",
 });
 
-const userName = "Divyansh Chahar";
-const userId = "divyanchahar@outlook.com";
+const userName = "John Doe";
 
 const devName = "Divyansh Chahar";
 const devId = "divyanshchahar@outlook.com";
@@ -43,7 +42,7 @@ function Header() {
   return (
     <>
       <div className="header">
-        <div id="branding">OPPURTUNITY</div>
+        <div id="branding">APPURTUNITY</div>
 
         <p>{today}</p>
 
