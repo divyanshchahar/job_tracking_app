@@ -50,30 +50,6 @@ body {
     brightness(101%) contrast(109%);
 }
 
-/* hover Pannel */
-.hoverpannel {
-  float: right;
-  padding: 10px;
-  border-radius: 5px;
-  margin-right: 10px;
-  background-color: white;
-}
-
-.hoverpannel button {
-  padding: 10px;
-  margin: 5px;
-  background-color: darkblue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  font-weight: bold;
-}
-
-.hoverpannel p {
-  margin: 5px;
-}
-
 /*  
  ##################
  # JOB ENTRY FORM #
