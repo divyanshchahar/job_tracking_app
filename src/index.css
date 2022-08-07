@@ -1,11 +1,11 @@
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
-  background-color: #FAFAFF;
+body {
+  background-color: #fafaff;
 }
 
 /* 
@@ -14,31 +14,31 @@ body{
 ########## 
 */
 
-.header{
-  display:flex;
+.header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 50px;
 }
 
-#branding{
-  font-family: 'Pacifico', cursive;
+#branding {
+  font-family: "Pacifico", cursive;
   color: white;
   background-color: darkblue;
   padding: 10px;
   border-radius: 5px;
 }
 
-.header button{
+.header button {
   background-color: darkblue;
   padding: 10px;
   color: white;
   font-weight: 600;
   border: none;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
-.header  button:hover {
+.header button:hover {
   cursor: pointer;
 }
 
@@ -46,32 +46,33 @@ body{
   height: 20px;
   vertical-align: middle;
   padding-right: 5px;
-  filter: invert(96%) sepia(0%) saturate(7500%) hue-rotate(117deg) brightness(101%) contrast(109%)
+  filter: invert(96%) sepia(0%) saturate(7500%) hue-rotate(117deg)
+    brightness(101%) contrast(109%);
 }
 
- /* hover Pannel */
- .hoverpannel{
-   float: right;
-   padding: 10px;
-   border-radius: 5px;
-   margin-right: 10px;
-   background-color: white;
- }
+/* hover Pannel */
+.hoverpannel {
+  float: right;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: white;
+}
 
- .hoverpannel button{
-   padding: 10px;
-   margin: 5px;
-   background-color: darkblue;
-   color: white;
-   border: none;
-   border-radius: 5px;
-   width: 100%;
-   font-weight: bold;
- }
+.hoverpannel button {
+  padding: 10px;
+  margin: 5px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+}
 
- .hoverpannel p{
-   margin: 5px;
- }
+.hoverpannel p {
+  margin: 5px;
+}
 
 /*  
  ##################
@@ -79,7 +80,7 @@ body{
  ################## 
  */
 
- .entryform {
+.entryform {
   margin: 5px auto;
   padding: 15px;
   display: grid;
@@ -89,12 +90,11 @@ body{
   row-gap: 10px;
   column-gap: 5px;
   width: fit-content;
- }
+}
 
- .entryform input {
-   padding: 5px;
- }
-
+.entryform input {
+  padding: 5px;
+}
 
 /* 
 ####################
@@ -102,8 +102,8 @@ body{
 #################### 
 */
 
-.joblist{
-  background-color:  rgb(255, 255, 255);
+.joblist {
+  background-color: rgb(255, 255, 255);
   margin: 5px auto;
   padding: 15px;
   display: grid;
@@ -114,24 +114,24 @@ body{
   width: fit-content;
 }
 
-.joblist button{
+.joblist button {
   background-color: transparent;
-  height:fit-content;
+  height: fit-content;
   width: fit-content;
   border: none;
   margin: 5px;
 }
 
-.joblist button:hover{
+.joblist button:hover {
   cursor: pointer;
 }
 
-.joblist img{
+.joblist img {
   height: 15px;
   width: 15px;
 }
 
-.joblistheader{
+.joblistheader {
   background-color: #e5e5ff;
   font-weight: bold;
   /* margin-top: 125px; */
@@ -143,32 +143,32 @@ body{
 ########## 
 */
 
-.bottombar{
+.bottombar {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   margin-top: 100px;
-  position:relative;
-  top: 188px;
-  padding: 20px 100px 50px 100px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 100px 20px 100px;
   background-color: white;
 }
 
-.bottombar img{
+.bottombar img {
   height: 40px;
   vertical-align: middle;
 }
 
-.credentialcontainer{
-  display:flex;
+.credentialcontainer {
+  display: flex;
 }
 
-.credentialcontainer img{
+.credentialcontainer img {
   height: 60px;
   margin-right: 10px;
 }
 
-.credentialcontainer a{
+.credentialcontainer a {
   text-decoration: none;
   color: inherit;
 }
